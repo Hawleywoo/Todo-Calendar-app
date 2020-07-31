@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'PT Sans Narrow', sans-serif;
+  box-sizing: border-box;
+}
+h1{
+  color: #f5dd90;
+  margin: 23px;
+  font-size: 79px;
+  font-weight: 900;
+  text-shadow: 2px 1px 8px #f5dd90, 6px 9px 8px #324376;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+nav{
+  color: #324376;
+  font-size: 20px;
+  margin-left: 26px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headers{
+  
+}
+
+.todo-header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f5dd90;
+  width: 10em;
+  border-radius: 50px;
+  padding: 10px;
+  color: #324376;
+  box-shadow: 8px 8px 16px ;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.todoForm {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 35px 0 0 0;
+}
+
+.todo-container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #324376;
+    width: auto;
+    margin: 6em 16em 1em 16em;
+    padding: 2em;
+    box-shadow: 8px 10px 22px #324376;
+    border-radius: 44px;
+}
+
+.todo-container > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #324376;;
+  background-color: #f5dd90;
+  border-radius: 50px;
+  box-shadow: 4px 5px 15px #F76C5E;
+  width: 10em;
+  padding: 10px 1.5em 10px 25px;
+}
+.todo-item{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #586BA4;
+  margin: 2em;
+  border-radius: 16px;
+  color: white;
+  text-shadow: 2px 1px 7px;
+  padding: 10px 2em
+}
+
+.todo-item > h2 {
+  padding: 0 1em;
+}
+
+.calendar-day{
+  border-radius: 5px;
+  margin: 2em;
+  border-color: black;
+  font-size: 2em;
+  padding: .75em;
+  margin: 10px;
+}
+
+.Today {
+  background-color: #586BA4;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-calendar{
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section{
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 10em;
 }
+
+.wave{
+  width: 100%;
+  position: relative;
+  background-color: #586BA4;
+  display: flex;
+  flex-direction: column;
+  padding: 6em;
+}
+
+.wave:after{
+  content: '';
+  position: absolute;
+  bottom: -272px;
+  width: 100%;
+  left: 0;
+  height: 150px;
+  background: url(./TodoWaveLight.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 5.5em;
+  filter: drop-shadow(0px 7mm 2.5mm hsla(25, 0%, 26%, 46%));
+}
+.wave:before{
+  content: '';
+  position: absolute;
+  bottom: -287px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url(./TodoWaveDark.svg);
+  background-repeat: no-repeat;
+  padding: 5.75em;
+  filter: drop-shadow(0px 4mm 2.5mm hsl(25, 0%, 26%));
+}
+
+a{
+  padding: .5em 1.25em .5em 1.25em;
+  border-style: solid;
+  border-radius: 6px;
+  margin: 5px;
+  font-size: 1.15em;
+  border-style: none;
+  color: #f5dd90;
+  text-decoration: none;
+}
+
+.todoForm-container{
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F76C5E;
+  padding: 25px 25px 45px;
+  margin: 17em 10em 2em;
+  border-radius: 75px;
+  box-shadow: 0 18px 35px #F76C5E;
+}
+
+input{
+  border-radius: 6px;
+  border-style: hidden;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+}
+h3{
+  color: #F76C5E;
+}
+
+button{
+  height: 2em;
+  background-color: #F76C5E;
+  border-radius: 10px;
+  border-color: white;
+  border-width: 0px;
+  margin: 0 0 0 1em;
+  box-shadow: 10px 10px 10x;
+}
+
+.map-div{
+ 
+}
+
+.map-div > h2{
+  align-items: center;
+}
+
+.todo-list{
+  margin: 0;
+}
+
+.calendar-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+thead{
+  font-size: 2em;
+    font-weight: 600;
+}
+
+table{
+  margin: 4em;
+}
+
+.calendar-todo::after{
+    content: '';
+}
+
+
+/* light blue #586ba4
+dark blue #324376
+yellow #f5dd90
+orange #F68e5f
+red #F76C5E */
