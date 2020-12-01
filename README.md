@@ -21,7 +21,7 @@
 The Todo With Benefits app is a full-stack application made with Ruby on Rails, React, and google maps api that allows users to keep track of todos that will show where the todos on the map are and a calendar to show when they are due.
 
 ## Intro Video
- [Todo With Benefit App Demo](https://www.youtube.com/)
+ [Todo With Benefit App Demo](https://youtu.be/FPoKkz813wU)
 
 ## Mod 4 Flatiron Project by Andrew Hawley
 
